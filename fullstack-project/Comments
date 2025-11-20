@@ -1,0 +1,16 @@
+from pydantic import BaseModel
+from typing import Optional
+
+class CommentData(BaseModel):
+    text: str
+    user_id: int
+    review_id: int
+    reply_comment: Optional[int] = None
+
+class CreateComment(CommentData): 
+    pass
+
+class Comment(CommentData):
+    id: int
+
+  

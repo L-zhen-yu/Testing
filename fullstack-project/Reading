@@ -1,0 +1,9 @@
+from pydantic import BaseModel
+from typing import Optional
+
+class Review(BaseModel):
+    id: int
+    rating: int
+    comment: Optional[str] = None
+    user_id: int
+    item_id: int
